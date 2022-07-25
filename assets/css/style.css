@@ -75,6 +75,7 @@ body {
     color: #aaa;
     border: none;
     cursor: auto;
+    box-shadow: none;
 }
 
 .btn-submit:disabled:hover{
@@ -94,6 +95,14 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+}
+
+.checkbox-item {
+    cursor: pointer;
+}
+
+.checkbox-item:checked {
+    color: blue;
 }
 
 .text-item {

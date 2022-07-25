@@ -31,7 +31,7 @@ formElement.addEventListener('submit', (Event) => {
     taskValue.classList.add('text-item')
     taskValue.innerText = inputElement.value;
 
-    const buttonsContainer = document.createElement('div');
+    const buttonsContainer = document.createElement('label');
     buttonsContainer.classList.add('buttons-container')
 
     const editButton = document.createElement('button');
@@ -120,7 +120,7 @@ const refreshTasksUsingLocalStorage = () => {
             checkboxElement.setAttribute('checked','true')
         }
     
-        const buttonsContainer = document.createElement('div');
+        const buttonsContainer = document.createElement('label');
         buttonsContainer.classList.add('buttons-container')
     
         const editButton = document.createElement('button');
@@ -132,9 +132,7 @@ const refreshTasksUsingLocalStorage = () => {
 
         buttonsContainer.appendChild(editButton);
         buttonsContainer.appendChild(deleteButton);
-        
-        // taskItemContainer.appendChild(checkNameContainer);
-        
+                
         taskItemContainer.appendChild(checkboxElement);
         taskItemContainer.appendChild(taskValue);
         taskItemContainer.appendChild(buttonsContainer);
