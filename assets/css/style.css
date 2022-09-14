@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     font-family: 'Poppins', sans-serif;
@@ -19,7 +20,7 @@ body {
 .container {
     background-color: #fff;
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-    width: 40%;
+    width: 50vw;
     padding: 30px 40px;
     border-radius: 15px;
     display: flex;
@@ -29,12 +30,13 @@ body {
 }
 
 .new-task-container {
-    width: 450px;
+    width: 500px;
     max-width: 100%;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .input-task {
@@ -49,7 +51,7 @@ body {
 .input-task:focus {
     box-shadow: 0 15px 30px rgba(0,0,0,0.3);
     outline: none;
-    border: 2px solid #008000;
+    border: 2px solid #05ac05;
 }
 
 .btn-submit {
@@ -84,8 +86,8 @@ body {
 }
 
 .tasks-container {
-    padding: 10px 20px;
-    width: 450px;
+    padding: 10px;
+    width: 500px;
     max-width: 90%;
 }
 
@@ -102,7 +104,7 @@ body {
 }
 
 .checkbox-item:checked {
-    color: blue;
+    color: #0000ff;
 }
 
 .text-item {
@@ -111,7 +113,7 @@ body {
     height: 100%;
     align-items: center;
     position: absolute;
-    left: 10%;
+    left: 15px;
     cursor: pointer;
     font-size: 1.1em;
 }
@@ -124,6 +126,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 25%;
+    gap: 5px;
 }
 
 .buttons-container button {
@@ -144,4 +147,47 @@ body {
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px 20px;
+    }
+
+    .new-task-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .tasks-container {
+        padding: 0;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25%;
+    }
+
+    .input-task {
+        max-width: 90%;
+    }
+
+    .btn-submit {
+        width: 90%;
+    }
+
+    .text-item {
+        display: flex;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        position: absolute;
+        font-size: 1em;
+        overflow: scroll;
+    }
 }
